@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page title</title>
+    <style>
+        div{
+            border: solid;
+            padding-top: 10px;
+            padding-bottom: 15px;
+            padding-left: 5px;
+            border-radius: 10px;
+            background: #cde0e0;
+            margin-top: 50px;
+            border: none;
+            
+        }
+    </style>
+</head>
+<body><div>
+    <h2></h2>
+    <p></p>
+    </div>
+    <script>
+        
+      
+        const array = [
+            {person: 'James', 
+            quote: 'One day or day one'
+            },
+            {
+             person: 'Alicia', 
+             quote: "You can do anything but you can't do everything"
+            },
+            {
+                person: 'Smith', 
+             quote: "There is a great difference between being broke and being poor, broke is only financial where as poorness is internal"
+            },
+            {
+                person: 'Samuel', 
+             quote: "If you try to make everyone around you happy, you will end up being not happy"
+            }
+        ]
+        
+          const h3 = document.querySelector('h2')
+        const p = document.querySelector('p')
+        
+        
+         let i = 0
+         h3.textContent = array[i].person;
+                    p.textContent = array[i].quote;
+                    
+        setInterval( () => {
+             
+                    h3.textContent = array[i].person;
+                    p.textContent = array[i].quote;
+                    
+                    i = (i + 1) % array.length
+                
+        }, 4000)
+    </script>
+</body>
+</html>
